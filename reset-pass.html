@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Compiled and minified CSS -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <br />
+    <div class="container">
+        <h2 class="center-align">FORGET PASSWORD?</h2>
+        <br />
+        <div class="col-md-6" style="margin:0 auto; float:none;">
+            <form method="post">
+                <div class="form-group">
+                    <h5>Please input your registered email address and we will send you information to recover your
+                        account.</h5><br><br>
+                    <input id="emailad" type="email" name="email" placeholder="Please input your email here..." class="form-control"
+                        required />
+                </div>
+                <div class="form-group" class="center-align">
+                    <input id="reset-pass" type="submit" name="submit" class="btn btn-info" value="RESET PASSWORD" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- GUIDE LIST -->
+    <div class="container" style="margin-top: 40px;">
+        <ul class="collapsible z-depth-0 guides" style="border: none;">
+
+        </ul>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-functions.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyC8Jb07Hdc-1mGgSRcEblU-EVUwRMEBPOE",
+            authDomain: "hive-itmyei.firebaseapp.com",
+            databaseURL: "https://hive-itmyei.firebaseio.com",
+            projectId: "hive-itmyei"
+        };
+        firebase.initializeApp(config);
+
+        // make auth and firestore references
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+        const functions = firebase.functions();
+
+        // update firestore settings
+        db.settings({ timestampsInSnapshots: true });
+    </script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="scripts/auth.js"></script>
+    <script src="scripts/index.js"></script>
+</body>
+
+</html>
