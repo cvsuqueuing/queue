@@ -42,34 +42,29 @@
   </form>
 
   <!-- ADD ACCOUNT MODAL -->
-  <div id="modal-signup" class="modal" style="width: 550px;">
+  <div id="modal-signup" class="modal" style="width: 500px;">
     <div class="modal-content">
-      <h4 class="indigo-text darken-5">REGISTER TO CvSU QUEUING</h4>
+      <h4 class="indigo-text darken-5">CREATE NEW ACCOUNT</h4>
       <form id="signup-form">
-        <div class="input-field">
-          <input type="email" id="signup-email" required />
-          <label for="signup-email">Email address</label>
-        </div>
         <div class="input-field">
           <input type="text" id="signup-name" required />
           <label for="signup-name">Full Name</label>
         </div>
         <div class="input-field">
-          <input type="text" id="signup-StudentNumber" required />
-          <label for="signup-StudentNumber">Student Number</label>
+          <input type="text" id="signup-college" required />
+          <label for="signup-college">College</label>
         </div>
-        <div class="dropdown">
-        <select name="cars" id="cars">
-          <option value="volvo">Volvo</option>
-          <option value="saab">Saab</option>
-          <option value="opel">Opel</option>
-          <option value="audi">Audi</option>
-          </select>
-        </div>
-        </select>
         <div class="input-field">
           <input type="text" id="signup-course" required />
           <label for="signup-course">Course</label>
+        </div>
+        <div class="input-field">
+          <input type="text" id="signup-StudentNumber" required />
+          <label for="signup-StudentNumber">Student Number</label>
+        </div>
+        <div class="input-field">
+          <input type="email" id="signup-email" required />
+          <label for="signup-email">Email address</label>
         </div>
         <div class="input-field">
           <input type="password" id="signup-password" required />
@@ -79,7 +74,7 @@
           <input type="password" id="confirm-signup-password" required />
           <label for="confirm-signup-password">Confirm password</label>
         </div>
-        <button class="btn indigo darken-2 z-depth-0">REGISTER</button>
+        <button class="btn indigo darken-2 z-depth-0">Create</button>
       </form>
     </div>
   </div>
@@ -110,7 +105,7 @@
     <div class="modal-content center-align">
       <h4 class="indigo-text darken-5">CONFIRM QUEUE FOR REGFORM IRREGULAR</h4>
       <form id="q2form">
-        <div class="input-field">
+        <!-- <div class="input-field">
           <input type="text" id="q2name" required />
           <label for="q2name">Full Name</label>
         </div>
@@ -121,7 +116,7 @@
         <div class="input-field">
           <input type="text" id="q2StudentNumber" required />
           <label for="q2StudentNumber">Student Number</label>
-        </div>
+        </div> -->
         <button class="btn indigo darken-2 z-depth-0">Confirm</button>
       </form>
     </div>
@@ -152,7 +147,7 @@
   <div id="modal-login" class="modal" style="width: 480px;">
     <div class="modal-content">
       <h3 class="black-text center-align">CvSU QUEUING</h3><br>
-      <h4 class="black-text center-align">Welcome! 😊</h4>
+      <h4 class="black-text center-align">HI THERE! 😊</h4>
       <div class="indigo-text darken-5">Kindly provide your login details below.</div>
       <form id="login-form">
         <div class="input-field">
