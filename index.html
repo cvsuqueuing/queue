@@ -42,13 +42,21 @@
   </form>
 
   <!-- ADD ACCOUNT MODAL -->
-  <div id="modal-signup" class="modal" style="width: 500px;">
+  <div id="modal-signup" class="modal" style="width: 550px;">
     <div class="modal-content">
-      <h4 class="indigo-text darken-5">CREATE NEW ACCOUNT</h4>
+      <h4 class="indigo-text darken-5">REGISTER TO CvSU QUEUING</h4>
       <form id="signup-form">
+        <div class="input-field">
+          <input type="email" id="signup-email" required />
+          <label for="signup-email">Email address</label>
+        </div>
         <div class="input-field">
           <input type="text" id="signup-name" required />
           <label for="signup-name">Full Name</label>
+        </div>
+        <div class="input-field">
+          <input type="text" id="signup-StudentNumber" required />
+          <label for="signup-StudentNumber">Student Number</label>
         </div>
         <div class="input-field">
           <input type="text" id="signup-college" required />
@@ -59,14 +67,6 @@
           <label for="signup-course">Course</label>
         </div>
         <div class="input-field">
-          <input type="text" id="signup-StudentNumber" required />
-          <label for="signup-StudentNumber">Student Number</label>
-        </div>
-        <div class="input-field">
-          <input type="email" id="signup-email" required />
-          <label for="signup-email">Email address</label>
-        </div>
-        <div class="input-field">
           <input type="password" id="signup-password" required />
           <label for="signup-password">Choose password</label>
         </div>
@@ -74,7 +74,7 @@
           <input type="password" id="confirm-signup-password" required />
           <label for="confirm-signup-password">Confirm password</label>
         </div>
-        <button class="btn indigo darken-2 z-depth-0">Create</button>
+        <button class="btn indigo darken-2 z-depth-0">REGISTER</button>
       </form>
     </div>
   </div>
@@ -147,7 +147,7 @@
   <div id="modal-login" class="modal" style="width: 480px;">
     <div class="modal-content">
       <h3 class="black-text center-align">CvSU QUEUING</h3><br>
-      <h4 class="black-text center-align">HI THERE! 😊</h4>
+      <h4 class="black-text center-align">Welcome! 😊</h4>
       <div class="indigo-text darken-5">Kindly provide your login details below.</div>
       <form id="login-form">
         <div class="input-field">
