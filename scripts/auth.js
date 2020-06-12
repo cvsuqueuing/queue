@@ -69,33 +69,42 @@ addAccount.addEventListener('submit', (e) => {
 const addQueue = document.querySelector('#qform');
 addQueue.addEventListener('submit', (e) => {
   e.preventDefault();
-  db.collection('qregformreg').add({
-    name: addQueue['qname'].value,
-    course: addQueue['qcourse'].value,
-    StudentNumber: addQueue['qStudentNumber'].value,
-    time: Date.now()
-  })
-    //close the modal
-    const modal = document.querySelector('#modal-queue');
-    M.Modal.getInstance(modal).close();
-    addQueue.reset();
+  // db.collection('qregformreg').add({
+  //   name: addQueue['qname'].value,
+  //   course: addQueue['qcourse'].value,
+  //   StudentNumber: addQueue['qStudentNumber'].value,
+  //   time: Date.now()
+  // })
+  //close the modal
+  const modal = document.querySelector('#modal-queue');
+  M.Modal.getInstance(modal).close();
+  addQueue.reset();
+  swal({
+    title: "You are currently in a queue!",
+    icon: "error",
   });
-// add queue to regform irregular
-const addQueue2 = document.querySelector('#q2form');
-addQueue2.addEventListener('submit', (e) => {
-  e.preventDefault();
-  db.collection('qregformirreg').add({
-    name: addQueue2['q2name'].value,
-    course: addQueue2['q2course'].value,
-    StudentNumber: addQueue2['q2StudentNumber'].value,
-    time: Date.now()
-  })
+});
+  // add queue to regform irregular
+  const addQueue2 = document.querySelector('#q2form');
+  addQueue2.addEventListener('submit', (e) => {
+    e.preventDefault();
+    db.collection('qregformirreg').add({
+      name: addQueue2['q2name'].value,
+      course: addQueue2['q2course'].value,
+      StudentNumber: addQueue2['q2StudentNumber'].value,
+      time: Date.now()
+    })
     //close the modal
     const modal = document.querySelector('#modal-queue2');
     M.Modal.getInstance(modal).close();
     addQueue2.reset();
-  });  
-// add queue to regform regular
+    swal({
+      title: "You are now in the queue!",
+      icon: "success",
+    });
+  });
+
+// add queue to cog
 const addQueue3 = document.querySelector('#q3form');
 addQueue3.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -105,11 +114,15 @@ addQueue3.addEventListener('submit', (e) => {
     StudentNumber: addQueue3['q3StudentNumber'].value,
     time: Date.now()
   })
-    //close the modal
-    const modal = document.querySelector('#modal-queue3');
-    M.Modal.getInstance(modal).close();
-    addQueue3.reset();
+  //close the modal
+  const modal = document.querySelector('#modal-queue3');
+  M.Modal.getInstance(modal).close();
+  addQueue3.reset();
+  swal({
+    title: "You are now in the Queue!",
+    icon: "success",
   });
+});
 // logout
 const logout = document.querySelector('#logout');
 logout.addEventListener('click', (e) => {
@@ -137,12 +150,6 @@ loginForm.addEventListener('submit', (e) => {
     loginForm.reset();
   });
   if (email === 'csso@gmail.com') {
-    swal({
-      title: "ACCESS DENIED!",
-      icon: "error",
-    });
-  }
-  if (password !== 'shoutliner123') {
     swal({
       title: "INCORRECT EMAIL OR PASSWORD!",
       icon: "error",

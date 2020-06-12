@@ -44,7 +44,7 @@ const setupQueues = (data) => {
     data.forEach(doc => {
       const queue = doc.data();
       const li = `
-          <li>
+          <li style="text-transform: uppercase;">
           <div class="collapsible-header indigo white-text">${queue.name}
           <br>${queue.StudentNumber}
           <br>${queue.course}
@@ -53,7 +53,7 @@ const setupQueues = (data) => {
         `;
       html += li;
     });
-    guideList.innerHTML = '<div><center><h3>REG FORM REGULAR</h3><a href="#" class="btn indigo darken-5 z-depth-4 modal-trigger" data-target="modal-queue">Take this Queue</a></center></div><br>' + html;
+    guideList.innerHTML = '<div><center><h4>REGISTRATION FORM REGULAR</h4><a href="#" class="btn indigo darken-5 z-depth-4 modal-trigger" data-target="modal-queue">Take this Queue</a></center></div><br>' + html;
   } else {
     guideList.innerHTML = '';
   }
@@ -66,7 +66,7 @@ const setupQueues2 = (data) => {
     data.forEach(doc => {
       const queue2 = doc.data();
       const li2 = `
-        <li>
+        <li style="text-transform: uppercase;">
           <div class="collapsible-header indigo white-text">${queue2.name}
           <br>${queue2.StudentNumber}
           <br>${queue2.course}
@@ -75,9 +75,9 @@ const setupQueues2 = (data) => {
       `;
       html2 += li2;
     });
-    guideList2.innerHTML = '<div><center><h3>REG FORM IRREGULAR</h3><a href="#" class="btn indigo darken-5 z-depth-4 modal-trigger" data-target="modal-queue2">Take this Queue</a></center><br></div>' + html2;
+    guideList2.innerHTML = '<div><center><h4>REGISTRATION FORM IRREGULAR</h4><a href="#" class="btn indigo darken-5 z-depth-4 modal-trigger" data-target="modal-queue2">Take this Queue</a></center><br></div>' + html2;
   } else {
-    guideList2.innerHTML = '';
+    guideList2.innerHTML = '<center><img src="img/cvsulogotrans.png"><br><h2>CvSU QUEUING</h2><h4>Queue Online</h4><h4>Skip the Lines</h4><h4>Hassle Free</h4></center>';
   }
 
 };
@@ -88,7 +88,7 @@ const setupQueues3 = (data) => {
     data.forEach(doc => {
       const queue3 = doc.data();
       const li3 = `
-        <li>
+        <li style="text-transform: uppercase;">
           <div class="collapsible-header indigo white-text">${queue3.name}
           <br>${queue3.StudentNumber}
           <br>${queue3.course}
@@ -97,7 +97,7 @@ const setupQueues3 = (data) => {
       `;
       html3 += li3;
     });
-    guideList3.innerHTML = '<div><center><h3>CERTIFICATE OF GRADES</h3><a href="#" class="btn indigo darken-5 z-depth-4 modal-trigger" data-target="modal-queue3">Take this Queue</a></center><br></div>' + html3;
+    guideList3.innerHTML = '<div><center><h4>CERTIFICATE OF GRADES QUEUE</h4><a href="#" class="btn indigo darken-5 z-depth-4 modal-trigger" data-target="modal-queue3">Take this Queue</a></center><br></div>' + html3;
   } else {
     guideList3.innerHTML = '';
   }
